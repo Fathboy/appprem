@@ -4,49 +4,101 @@ body {
 }
 
 /* Navbar utama */
-.navbar {
-  background-color: #57564F;
-  overflow: hidden;
+nav {
+  background: rgb(64, 64, 129);
+  color: white;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
 .logo {
-  color: white;
   font-size: 20px;
   font-weight: bold;
-  padding: 14px 0;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  background:rgb(52, 84, 143);
+  padding: 10px;
+}
+
+.menu a:hover {
+  background: #5a6b83;
+}
+
+.menu a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.hamburger span {
+  background: white;
+  display: block;
+  height: 3px;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* jika aktif */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media(min-width:  600px) {
+  .menu {
+    display: flex !important;
+    flex-direction: row;
+    background: none;
+  }
+  .menu a {
+    margin: 20px;
+  }
+  .hamburger {
+    display: none;
+  }
 }
 
 .home {
   padding: 20px;
-  background-color: #7A7A73;
+  background-color: #34699A;
   text-align: center;
+  height: 700px;
 }
 
 .layanan-btn {
   text-decoration: none; 
-  color: white; 
-  background-color: #1d2b3a; 
-  padding: 10px 100px; 
-  border-radius: 10px;
-  margin: 10px;
-  width: 200px;
+  color: hsl(0, 0%, 0%); 
+  background-color: #064a83; 
+  padding: 10px 50px; 
+  border-radius: 30px;
+  border: 3px solid hsl(0, 0%, 0%);
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: bold;
   display: inline-block;
 }
 
 .home a:hover {
-  background-color: #47475c;
-}
-
-.mengapa {
-  background-color: rgb(255, 255, 255);
-  padding: 20px;
+  background-color: hsl(0, 0%, 0%);
+  color: #064a83;
 }
 
 /* Tombol hamburger */
@@ -65,7 +117,7 @@ body {
 }
 
 .nav-links a {
-  color: white;
+  color: rgb(2, 2, 2);
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
@@ -73,7 +125,35 @@ body {
 }
 
 .nav-links a:hover {
-  background-color: #575757;
+  background-color: #415b7c;
+}
+
+.layanan-item {
+  background-color: rgb(8, 58, 151);
+  color: white;;
+  border-radius: 20px;
+  display: inline-block;
+  width: 170px;
+  animation: floating 3s ease-in-out infinite;
+  filter: drop-shadow(2px 4px 6px rgb(255, 255, 255));
+}
+
+.layanan-item img {
+  width: 30%;
+  height: auto;
+}
+
+.layanan-item a  {
+  text-decoration: none;
+  color: white;
+  display: block;
+  border-radius: 20px;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.layanan-item a:hover {
+  background-color: #34699A;
 }
 
 /* Responsif untuk HP */
@@ -86,13 +166,13 @@ body {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #333;
+    background-color: #113F67;
   }
 
   .nav-links a, .dropdown .dropbtn {
     text-align: left;
     padding: 14px;
-    width: 100%;
+    width: 50%;
   }
 
   .nav-links.active {
@@ -105,3 +185,10 @@ body {
     box-shadow: none;
   }
 }
+
+@keyframes floating {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+

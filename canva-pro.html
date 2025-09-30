@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Canva</title>
+
+    <style>
+nav {
+  background: rgb(64, 64, 129);
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  background:rgb(52, 84, 143);
+  padding: 10px;
+}
+
+.menu a:hover {
+  background: #5a6b83;
+}
+
+.menu a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.hamburger span {
+  background: rgb(255, 255, 255);
+  display: block;
+  height: 3px;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* jika aktif */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media(min-width:  600px) {
+  .menu {
+    display: flex !important;
+    flex-direction: row;
+    background: none;
+  }
+  .menu a {
+    margin: 10px;
+  }
+  .hamburger {
+    display: none;
+  }
+}
+
+.home {
+  padding: 20px;
+  background-color: #34699A;
+  text-align: center;
+  height: 700px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: cadetblue;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+footer a:hover {
+  background-color: #5a6b83;
+}
+    </style>
+</head>
+<body  style="margin: 0; font-family: Arial, sans-serif;">
+  <nav>
+    <div class="logo">StarbhakApp</div>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+    <!-- Menu -->
+  <div class="menu" id="menu">
+      <a href="index.html">Beranda</a>
+      <a href="#about">About</a>
+      <a href="http://wa.me//6285719379665">Kontak</a>
+      <a href="#login">Login</a>
+  </div>
+
+  <section class="price" id="price" 
+           style="background-color: #58A0C8; text-align: center; padding: 20px; height: 1000px;">
+    <img src="canva.png" alt="Layanan 1" style="max-width: 250px; height: auto;">
+    <h1 style="color: rgb(25, 83, 69);">CANVA PRO</h1>
+    <h3 style="text-align: justify;">HARGA:</h3>
+    <h4 style="color: rgb(41, 65, 71); text-align: justify;"><LI>MEMBER & DESAIGNER:<br>10.000/1bulan<br>25.000/3bulan<br>50.000/tahun<br><br><li>PRIVATE & OWNER/HEAD:<br>20.000/1bulan</LI></h4>
+    <h3 style="text-align: justify;">DESKRIPSI:</h3>
+    <p style="max-width: 600px; margin: auto; text-align: justify;">
+      Canva Pro adalah versi berbayar dari platform desain grafis populer, Canva. Dengan Canva Pro, pengguna mendapatkan akses ke berbagai fitur premium yang tidak tersedia dalam versi gratis. Fitur-fitur ini meliputi akses ke ribuan template desain profesional, elemen grafis, foto stok, dan font eksklusif. Selain itu, Canva Pro menawarkan kemampuan untuk mengunggah font kustom, menyimpan desain dengan latar belakang transparan, serta alat kolaborasi yang memudahkan tim bekerja bersama dalam proyek desain. Pengguna juga dapat mengatur merek mereka dengan kit merek yang memungkinkan penyimpanan logo, palet warna, dan font merek untuk konsistensi desain. Canva Pro sangat ideal untuk bisnis, pemasar, dan desainer yang membutuhkan alat desain yang kuat dan fleksibel untuk membuat konten visual yang menarik dengan cepat dan mudah.
+      <br><br>
+  </section>
+
+  <footer style="background: rgb(64, 64, 129); color: white; text-align: center; padding: 20px;">
+    <div class="footer-content">
+      <a href="index.html">BELI SEKARANG</a>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    });
+
+    // Tutup menu saat ukuran layar diubah
+    document.querySelector(".menu a").forEach(link => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        menu.style.display = "none";
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -3,51 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbar Responsif</title>
+  <title>StarbhakApp</title>
   <!-- CSS eksternal -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Navbar -->
-  <div class="navbar">
+  <nav>
     <div class="logo">StarbhakApp</div>
-
-    <!-- Tombol hamburger -->
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
     <!-- Menu -->
-    <div class="nav-links" id="navLinks">
+  <div class="menu" id="menu">
       <a href="#home">Beranda</a>
       <a href="#about">About</a>
       <a href="http://wa.me//6285719379665">Kontak</a>
       <a href="#login">Login</a>
-    </div>
   </div>
 
   <!-- Isi halaman -->
-  <div class="home">
-    <h1>Website Aplikasi Premium Murah & Layanan Digital Terpercaya</h1>
-    <p>Nikmati kemudahan Layanan Aplikasi Premium Dan Solusi Digital Lainnya Dengan Harga Murah Dan Proses Cepat cuma di StarbhakApp</p>
-    <a href="#layanan" class="layanan-btn">Pilih Layanan</a>
-  </div>
+  <section class="home" id="home">
+    <h1>Website Aplikasi Premium Murah Terpercaya</h1>
+    <p>
+      Nikmati kemudahan Layanan Aplikasi Premium Lainnya
+      Dengan Harga Murah Dan Proses Cepat
+    </p>
+    <img src="buynow.png" alt="Gambar Utama" style="max-width: 70%; height: auto;">
+    <a href="#layanan" class="layanan-btn" style="margin: 50px;">Pilih Layanan</a>
+  </section>
 
-  <div class="mengapa">
-    <h1>Mengapa Memilih Kami</h1>
-    <p>StarbhakApp adalah pilihan terbaik untuk kebutuhan digital anda, karena:</p>
-    <h3>Harga Kompetitif</h3>
-  </div>
+  <marquee style="background-color: rgb(26, 182, 182); padding: 10px; font-weight: bold;">
+    Promo Spesial! Dapatkan Diskon 10% untuk Pembelian Pertama Anda!
+  </marquee>
 
-  <div class="layanan" style="background-color: rgb(121, 47, 47); text-align: center; padding: 20px;">
+  <section class="layanan" id="layanan" 
+           style="background-color: #58A0C8; text-align: center; padding: 20px;">
     <h1>Daftar Layanan</h1>
+    <div class="layanan-list" style="display: flex; flex-wrap: wrap; justify-content: center;">
+      <div class="layanan-item" style="display: inline-block; margin: 20px;">
+        <a href="canva-pro.html">
+          <img src="canva.png" alt="Layanan 1">
+        <h3>CANVA PRO</h3>
+        <h4 style="color: rgb(149, 227, 247);">Rp10.000</h4>
+        </a>
+      </div>
+      <div class="layanan-item" style="display: inline-block; margin: 20px;">
+        <a href="capcut-pro.html">
+          <img src="capcut.png" alt="Layanan 1">
+        <h3>CAPCUT PRO</h3>
+        <h4 style="color: rgb(149, 227, 247);">Rp15.000</h4>
+        </a>
+      </div>
+      <div class="layanan-item" style="display: inline-block; margin: 20px;">
+        <a href="youtube-prem.html">
+          <img src="youtube.png" alt="Layanan 1">
+        <h3>YOUTUBE PREMIUM</h3>
+        <h4 style="color: rgb(149, 227, 247);">Rp5.500</h4>
+        </a>
+      </div>
+      <div class="layanan-item" style="display: inline-block; margin: 20px;">
+        <a href="am.html">
+          <img src="am.png" alt="Layanan 1">
+        <h3>ALIGHT MOTION PRO</h3>
+        <h4 style="color: rgb(149, 227, 247);">Rp8.000</h4>
+        </a>
+      </div>
+      <div class="layanan-item" style="display: inline-block; margin: 20px;">
+        <a href="netflix.html">
+          <img src="spotify.png" alt="Layanan 1">
+        <h3>SPOTIFY PREMIUM</h3>
+        <h4 style="color: rgb(149, 227, 247);">Rp22.000</h4>
+        </a>
+      </div>
+      <div class="layanan-item" style="display: inline-block; margin: 20px;">
+        <a href="about.html">
+          <img src="prime.png" alt="Layanan 1">
+        <h3>PRIME VIDEO</h3>
+        <h4 style="color: rgb(149, 227, 247);">Rp12.000</h4>
+        </a>
+      </div>
+      <div class="layanan-item" style="display: inline-block; margin: 20px;">
+        <a href="wink.html">
+          <img src="wink.png" alt="Layanan 1">
+        <h3>WINK</h3>
+        <h4 style="color: rgb(149, 227, 247);">Rp12.000</h4>
+        </a>
+      </div>
+    </div>
     <div style="height: 1000px;"></div>
-  </div>
+  </section>
 
   <!-- Script untuk hamburger -->
   <script>
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("active");
-    }
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    });
   </script>
 
 </body>
