@@ -20,8 +20,8 @@
   </nav>
     <!-- Menu -->
   <div class="menu" id="menu">
-      <a href="#home">Beranda</a>
-      <a href="#about">About</a>
+      <a href="index.html">Beranda</a>
+      <a href="about.html">About</a>
       <a href="http://wa.me//6285719379665">Kontak</a>
       <a href="#login">Login</a>
   </div>
@@ -49,7 +49,7 @@
         <a href="canva-pro.html">
           <img src="canva.png" alt="Layanan 1">
         <h3>CANVA PRO</h3>
-        <h4 style="color: rgb(149, 227, 247);">Rp8.000</h4>
+        <h4 style="color: rgb(149, 227, 247);">Rp5.000</h4>
         </a>
       </div>
       <div class="layanan-item" style="display: inline-block; margin: 20px;">
@@ -63,18 +63,18 @@
         <a href="youtube-prem.html">
           <img src="youtube.png" alt="Layanan 1">
         <h3>YOUTUBE PREMIUM</h3>
-        <h4 style="color: rgb(149, 227, 247);">Rp5.500</h4>
+        <h4 style="color: rgb(149, 227, 247);">Rp5.000</h4>
         </a>
       </div>
       <div class="layanan-item" style="display: inline-block; margin: 20px;">
         <a href="am.html">
           <img src="am.png" alt="Layanan 1">
         <h3>ALIGHT MOTION PRO</h3>
-        <h4 style="color: rgb(149, 227, 247);">Rp8.000</h4>
+        <h4 style="color: rgb(149, 227, 247);">Rp5.000</h4>
         </a>
       </div>
       <div class="layanan-item" style="display: inline-block; margin: 20px;">
-        <a href="netflix.html">
+        <a href="spotify.html">
           <img src="spotify.png" alt="Layanan 1">
         <h3>SPOTIFY PREMIUM</h3>
         <h4 style="color: rgb(149, 227, 247);">Rp22.000</h4>
@@ -94,9 +94,69 @@
         <h4 style="color: rgb(149, 227, 247);">Rp12.000</h4>
         </a>
       </div>
+      <div class="layanan-item" style="display: inline-block; margin: 20px;">
+        <a href="netflix.html">
+          <img src="netflix.png" alt="Layanan 1">
+        <h3>NETFLIX</h3>
+        <h4 style="color: rgb(149, 227, 247);">Rp30.000</h4>
+        </a>
+      </div>
+
     </div>
-    <div style="height: 1000px;"></div>
+    <div style="height: 100px;"></div>
   </section>
+
+  <section class="faq-section" style="background-color: rgb(48, 139, 124); padding: 20px;">
+    <h2 class="faq-title">Pertanyaan Umum</h2>
+    <p class="faq-description">Temukan jawaban untuk pertanyaan yang sering diajukan tentang layanan kami</p>
+
+    <div class="faq">
+        <div class="faq-question">
+            <span>Apakah bisa upgrade paket?</span>
+            <span class="icon">⌄</span>
+        </div>
+        <div class="faq-answer">
+            <p>Tentu! Anda bisa upgrade paket kapan saja melalui panel kontrol. Perbedaan harga akan dihitung secara pro-rata berdasarkan sisa waktu berlangganan Anda.</p>
+        </div>
+    </div>
+
+    <div class="faq">
+        <div class="faq-question">
+            <span>Bagaimana proses pemesanan?</span>
+            <span class="icon">⌄</span>
+        </div>
+        <div class="faq-answer">
+            <p>Anda cukup memilih produk yang diinginkan, lakukan pembayaran, dan sistem kami akan mengirimkan produk melalui WhatsApp Anda setelah pembayaran terkonfirmasi.</p>
+        </div>
+    </div>
+
+    <div class="faq">
+        <div class="faq-question">
+            <span>Apakah ada garansi?</span>
+            <span class="icon">⌄</span>
+        </div>
+        <div class="faq-answer">
+            <p>Kami memberikan garansi penggantian jika akun tidak dapat digunakan atau terjadi kesalahan dari pihak kami dalam 24 jam setelah pembelian.</p>
+        </div>
+    </div>
+
+    <div class="faq">
+        <div class="faq-question">
+            <span>Apakah produk digital bisa direfund?</span>
+            <span class="icon">⌄</span>
+        </div>
+        <div class="faq-answer">
+            <p>Mohon maaf, produk digital tidak dapat direfund setelah dikirim. Namun, kami siap membantu jika terjadi kendala teknis dengan produk yang diterima.</p>
+        </div>
+    </div>
+
+</section>
+
+  <footer style="background: #132a36; text-align: center; padding: 20px 0;">
+    <div>
+      <a>© 2025 StarbhakApp. All rights reserved.</a>
+    </div>
+  </footer>
 
   <!-- Script untuk hamburger -->
   <script>
@@ -106,6 +166,14 @@
     hamburger.addEventListener("click", () => {
       hamburger.classList.toggle("active");
       menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    });
+
+    const faqs = document.querySelectorAll('.faq-question');
+    faqs.forEach(faq => {
+        faq.addEventListener('click', () => {
+            const parent = faq.parentElement;
+            parent.classList.toggle('active');
+        });
     });
   </script>
 
