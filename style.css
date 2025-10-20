@@ -133,7 +133,7 @@ nav {
   color: white;;
   border-radius: 20px;
   display: inline-block;
-  width: 38%;
+  width: 36%;
   animation: floating 3s ease-in-out infinite;
   filter: drop-shadow(2px 4px 6px rgb(255, 255, 255));
 }
@@ -264,5 +264,6 @@ nav {
         transform: rotate(180deg);
         color: #00ffff;
     }
+
 
 
